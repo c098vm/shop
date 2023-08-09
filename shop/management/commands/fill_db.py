@@ -1,5 +1,4 @@
 from django.core.management import BaseCommand
-
 from shop.models import Category, Product
 
 

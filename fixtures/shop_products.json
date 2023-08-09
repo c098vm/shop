@@ -1,32 +1,5 @@
 [
   {
-    "model": "shop.category",
-    "pk": 1,
-    "fields": {
-      "name": "Одежда",
-      "description": "Спортивная одежда для активного отдыха",
-      "create_at": null
-    }
-  },
-  {
-    "model": "shop.category",
-    "pk": 2,
-    "fields": {
-      "name": "Инвентарь",
-      "description": "Спортивный иныентарь для залов и домашнего пользования",
-      "create_at": null
-    }
-  },
-  {
-    "model": "shop.category",
-    "pk": 3,
-    "fields": {
-      "name": "Обувь",
-      "description": "Удобная и практичная обувь для прогулок и занятий спортом",
-      "create_at": null
-    }
-  },
-  {
     "model": "shop.product",
     "pk": 1,
     "fields": {
