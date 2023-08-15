@@ -6,7 +6,7 @@
     <div class="col-md-8">
         <div class="card mb-4 box-shadow">
             <img class="card-img-top"
-                 src="/media/{{ object.img }}" alt="Card image cap">
+                 src="/media/{{ object.image }}" alt="Card image cap">
             <div class="card-body">
                 <p class="card-text">
                 <h1>{{ object.name }}</h1><br>
@@ -17,6 +17,9 @@
                 <strong>Дата обновления:</strong> {{ object.last_change_date }}
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a href="{% url 'shop:index' %}" type="button"
+                           class="btn btn-sm btn-outline-secondary">Назад</a>
                 </div>
             </div>
         </div>
