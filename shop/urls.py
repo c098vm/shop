@@ -1,11 +1,11 @@
 from django.urls import path
 
 from shop.apps import ShopConfig
-from shop.views import index, product
+from shop.views import ProductListView, ProductDetailView
 
 app_name = ShopConfig.name
 
 urlpatterns = [
-    path('', index, name='index'),
-    path('product/<int:pk>', product, name='product'),
+    path('', ProductListView.as_view(), name='index'),
+    path('product/<int:pk>', ProductDetailView.as_view(), name='product'),
 ]
