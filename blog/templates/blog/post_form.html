@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<main class="container">
+    <div class="row mb-2">
+        {% if object %}
+            <h1>Изменить пост</h1><br><br>
+        {% else %}
+            <h1>Создать пост</h1><br><br>
+        {% endif %}
+        <div class="col-md-12">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                
+                <div class="col p-12 d-flex flex-column position-static">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        {% if object %}
+                        <button type="submit" class="btn btn-outline-primary">Сохранить</button>
+                        {% else %}
+                        <button type="submit" class="btn btn-outline-primary">Создать</button>
+                        {% endif %}
+                        <a href="{% url 'blog:posts' %}" type="submit" class="btn btn-warning">Отмена</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

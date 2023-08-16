@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<main class="container">
+    <div class="row mb-2">
+        <div class="col-md-12">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-12 d-flex flex-column position-static">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <p class="card-text mb-auto">Удалить пост "{{ object.title }}"?</p><br><br>
+                        <button type="submit" class="btn btn-danger">Удалить</button>
+                        <a href="{% url 'blog:posts' %}" type="submit" class="btn btn-warning">Отмена</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
